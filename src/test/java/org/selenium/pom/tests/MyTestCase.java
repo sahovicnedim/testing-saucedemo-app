@@ -1,5 +1,6 @@
 package org.selenium.pom.tests;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.selenium.pom.base.BaseTest;
 import org.selenium.pom.objects.Login;
@@ -27,6 +28,9 @@ public class MyTestCase extends BaseTest {
         CheckoutPage checkoutPage = new Cart(driver).clickCheckoutButton();
         YourInformation yourInformation = JacksonUtils.deserializeJson("yourInformation.json", YourInformation.class);
         OverviewPage overviewPage = new CheckoutInformation(driver).setLoginInformation(yourInformation).clickContinueButton();
+        CheckoutComplete checkoutComplete = new OverviewPage(driver).clickFinishButton();
+
+        Assertions.assertEquals("Your order has been dispatched, and will arrive just as fast as the pony can get there!", checkoutComplete.getNotice());
 
 
 
