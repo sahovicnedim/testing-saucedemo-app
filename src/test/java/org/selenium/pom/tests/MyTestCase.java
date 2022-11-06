@@ -3,6 +3,7 @@ package org.selenium.pom.tests;
 import org.junit.jupiter.api.Test;
 import org.selenium.pom.base.BaseTest;
 import org.selenium.pom.objects.Login;
+import org.selenium.pom.objects.YourInformation;
 import org.selenium.pom.pages.*;
 import org.selenium.pom.utils.JacksonUtils;
 
@@ -24,6 +25,10 @@ public class MyTestCase extends BaseTest {
 
         Cart cart = new Product(driver).clickBasketButton();
         CheckoutPage checkoutPage = new Cart(driver).clickCheckoutButton();
+        YourInformation yourInformation = JacksonUtils.deserializeJson("yourInformation.json", YourInformation.class);
+        OverviewPage overviewPage = new CheckoutInformation(driver).setLoginInformation(yourInformation).clickContinueButton();
+
+
 
 
 
