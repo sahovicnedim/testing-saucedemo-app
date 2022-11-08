@@ -15,7 +15,7 @@ public class Cart extends BasePage {
 
     public CheckoutPage clickCheckoutButton(){
         wait.until(ExpectedConditions.elementToBeClickable(checkoutButton)).click();
-        return new CheckoutPage(driver); //trebamo ovo uradit samo ako navigiramo na novu stranicu, ako cemo ostat na istoj stranici ne moramo ovo uradit, ovo je fluent interface
+        return new CheckoutPage(driver);
 
     }
 

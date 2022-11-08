@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.selenium.pom.base.BasePage;
-import org.selenium.pom.objects.Login;
+
 import org.selenium.pom.objects.YourInformation;
 
 public class CheckoutInformation extends BasePage {
@@ -45,7 +45,7 @@ public class CheckoutInformation extends BasePage {
 
     public OverviewPage clickContinueButton(){
         wait.until(ExpectedConditions.elementToBeClickable(continueButton)).click();
-        return new OverviewPage(driver); //trebamo ovo uradit samo ako navigiramo na novu stranicu, ako cemo ostat na istoj stranici ne moramo ovo uradit, ovo je fluent interface
+        return new OverviewPage(driver);
 
     }
 

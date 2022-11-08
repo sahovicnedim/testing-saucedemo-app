@@ -13,7 +13,7 @@ public class OverviewPage extends BasePage {
 
     public CheckoutComplete clickFinishButton(){
         wait.until(ExpectedConditions.elementToBeClickable(finishButton)).click();
-        return new CheckoutComplete(driver); //trebamo ovo uradit samo ako navigiramo na novu stranicu, ako cemo ostat na istoj stranici ne moramo ovo uradit, ovo je fluent interface
+        return new CheckoutComplete(driver);
 
     }
 

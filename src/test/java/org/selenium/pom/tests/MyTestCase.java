@@ -8,7 +8,7 @@ import org.selenium.pom.objects.YourInformation;
 import org.selenium.pom.pages.*;
 import org.selenium.pom.utils.JacksonUtils;
 
-import java.awt.*;
+
 import java.io.IOException;
 
 public class MyTestCase extends BaseTest {

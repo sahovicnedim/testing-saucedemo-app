@@ -18,13 +18,11 @@ public class HomePage extends BasePage {
     }
 
     public HomePage load(){
-        load("/"); //pozovemo load metod iz base page
+        load("/");
         return this;
     }
 
     public HomePage enterUsername(String username){
-        //kolko sam skonto ovo wait je da se priceka odredjeno vrijeme(nekoliko sekundi) i onda se dalje radi logika
-        //explicit wait, posto imamo dvije operacije clear i sendkeys pravimo web element i koristimo ga da izvrsi te operacije
         WebElement e = wait.until(ExpectedConditions.visibilityOfElementLocated(usernameField));
         e.clear();
         e.sendKeys(username);
@@ -32,8 +30,6 @@ public class HomePage extends BasePage {
     }
 
     public HomePage enterPassword(String password){
-        //kolko sam skonto ovo wait je da se priceka odredjeno vrijeme(nekoliko sekundi) i onda se dalje radi logika
-        //explicit wait, posto imamo dvije operacije clear i sendkeys pravimo web element i koristimo ga da izvrsi te operacije
         WebElement e = wait.until(ExpectedConditions.visibilityOfElementLocated(passwordField));
         e.clear();
         e.sendKeys(password);
@@ -41,7 +37,7 @@ public class HomePage extends BasePage {
     }
     public Product clickLoginButton(){
         wait.until(ExpectedConditions.elementToBeClickable(loginButton)).click();
-        return new Product(driver); //trebamo ovo uradit samo ako navigiramo na novu stranicu, ako cemo ostat na istoj stranici ne moramo ovo uradit, ovo je fluent interface
+        return new Product(driver);
 
     }
 

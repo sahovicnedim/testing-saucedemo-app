@@ -21,7 +21,7 @@ public class Item extends BasePage  {
 
     public Product clickBackToProduct(){
         wait.until(ExpectedConditions.elementToBeClickable(backToProduct)).click();
-        return new Product(driver); //trebamo ovo uradit samo ako navigiramo na novu stranicu, ako cemo ostat na istoj stranici ne moramo ovo uradit, ovo je fluent interface
+        return new Product(driver);
 
     }
 

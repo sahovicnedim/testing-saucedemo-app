@@ -16,7 +16,7 @@ public class Product extends BasePage {
 
     public Item clickImage(){
         wait.until(ExpectedConditions.elementToBeClickable(image)).click();
-        return new Item(driver); //trebamo ovo uradit samo ako navigiramo na novu stranicu, ako cemo ostat na istoj stranici ne moramo ovo uradit, ovo je fluent interface
+        return new Item(driver);
 
     }
 
@@ -28,7 +28,7 @@ public class Product extends BasePage {
 
     public Cart clickBasketButton(){
         wait.until(ExpectedConditions.elementToBeClickable(basket)).click();
-        return new Cart(driver); //trebamo ovo uradit samo ako navigiramo na novu stranicu, ako cemo ostat na istoj stranici ne moramo ovo uradit, ovo je fluent interface
+        return new Cart(driver);
 
     }
 
